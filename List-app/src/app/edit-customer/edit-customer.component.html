@@ -1,0 +1,26 @@
+<div *ngIf="model!=undefined">
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" [(ngModel)]="model.customerID" [disabled]="true" placeholder="ID "  aria-describedby="basic-addon1">
+  </div>
+
+
+
+<div class="input-group mb-3">
+    <input type="text"class="form-control"  [(ngModel)]="model.name.first"  placeholder="first name"  aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" [(ngModel)]="model.name.last" placeholder="last name"  aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" [(ngModel)]="model.birthday" placeholder="birthday"  aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <select class="custom-select" [(ngModel)]="model.gender" >
+      <option value="m">Man</option>
+      <option value="w">Woman</option>
+    </select>
+  </div>
+  <a type="button" class="btn btn-success" (click)="save()">Save</a>
+  <a type="button" class="btn btn-warning" routerLink="/list" >Back</a>
+</div>
